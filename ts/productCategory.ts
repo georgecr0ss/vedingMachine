@@ -1,4 +1,4 @@
-abstract class ProductCategory {
+ abstract class ProductCategory {
     protected pathImg = "img/"
     name: string
     abstract getImgUrl(): string
@@ -10,6 +10,7 @@ class SodaCategory extends ProductCategory{
     getImgUrl() {
         return this.pathImg + "drinks/SodaCan.png"
     }
+    
 }
 
 class ChipsCategory extends ProductCategory {
@@ -31,4 +32,12 @@ class CandyBar extends ProductCategory {
     getImgUrl() {
         return this.pathImg + "food/CandyBar.png"
     }
+}
+
+export { 
+    ProductCategory, 
+    SodaCategory, 
+    CandyBar, 
+    CandyCategory,
+    ChipsCategory
 }
